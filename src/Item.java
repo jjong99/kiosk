@@ -13,6 +13,11 @@ public class Item extends Menu {
         this.price = price;
     }
 
+    @Override
+    public String getName() {
+        return name;
+    }
+
     public double getPrice() {
         return this.price;
     }
