@@ -1,26 +1,23 @@
-import java.util.ArrayList;
-
 public class Item extends Menu {
-    private String name;
-    private String desc;
-    private double price;
+    public String name;
+    public String desc;
+    public double price;
 
-    ArrayList<Item> roti = new ArrayList<>();
+    public Item() {
+    }
 
-    public Item(){}
-    public Item(String name, String desc, double price){
+    public Item(String name, String desc, double price) {
         super(name, desc);
         this.name = name;
         this.desc = desc;
         this.price = price;
     }
+
     public double getPrice() {
-        return price;
+        return this.price;
     }
 
-    @Override
     public String toString() {
-        return "  " + name + "   W" + price + "    " + desc;
+        return "  " + this.name + "   W" + this.price + "    " + this.desc;
     }
-
 }

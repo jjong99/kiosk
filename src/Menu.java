@@ -1,7 +1,7 @@
 class Menu {
 
-    String name;
-    String desc;
+    public String name;
+    public String desc;
 
     public Menu(){}
     public Menu(String name, String desc) {
@@ -10,16 +10,16 @@ class Menu {
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public String getDesc() {
-        return desc;
+        return this.desc;
     }
 
     @Override
     public String toString() {
-        return "  " + name + "  " + desc;
+        return "  " + this.name + "  " + this.desc;
     }
 
 
