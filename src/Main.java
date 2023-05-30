@@ -90,6 +90,7 @@ public class Main {
                         continue mainMenu;
                     }
                 } else if (num1 == 4) {
+                    // 4. 주문 화면
                     double totalPrice = 0.0;
                     for(int i=0 ; i < order.getSize(); i++){
                         totalPrice += order.getItem(i).getPrice();
@@ -103,9 +104,11 @@ public class Main {
                     System.out.println("1. 주문\t2. 메뉴판");
                     num4 = sc.nextInt();
                     if (num4 == 1) {
+                        5. 주문 완료 화면
                         System.out.println(order.orderComplete());
                         order.clearOrder();
                     } else if (num4 == 2) {
+                        // 6. 주문 취소 화면
                         System.out.println("진행하던 주문을 취소하시겠습니까?");
                         System.out.println("1. 확인\t2. 취소");
                         num5 = sc.nextInt();
