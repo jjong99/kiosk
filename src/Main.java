@@ -99,7 +99,7 @@ public class Main {
                     System.out.println("1. 주문\t2. 메뉴판");
                     num4 = sc.nextInt();
                     if (num4 == 1) {
-                        5. 주문 완료 화면
+                        // 5. 주문 완료 화면
                         System.out.println(order.orderComplete());
                         order.clearOrder();
                     } else if (num4 == 2) {
