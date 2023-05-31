@@ -31,6 +31,14 @@ public class Order {
         return this.order.size();
     }
 
+    // 장바구니 상품 총가격 구하기
+    public double getTotalPrice() {
+        double totalPrice = 0.0;
+        for(int i=0 ; i < order.size(); i++){
+            totalPrice += order.get(i).price;
+        }
+        return totalPrice;
+    }
     // 주문번호 가져오기
     public int getNumber(){
         return orderNo;
