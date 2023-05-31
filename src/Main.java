@@ -27,7 +27,6 @@ public class Main {
         Display a = new Display();
         Category c = new Category();
 
-            mainMenu:
             while(true) {
 
                 // 1. 메인 화면
@@ -55,7 +54,7 @@ public class Main {
                         order.addItem(selectMenu);
                         System.out.println(selectMenu.getName() + "가 장바구니에 추가되었습니다.\n\n");
                     } else if (num3 == 2) {
-                        continue mainMenu;
+                        // continue mainMenu;
                     }
                 } else if (num1 == 2) {
                     System.out.println("[ 로띠 메뉴 ]\n");
@@ -71,7 +70,7 @@ public class Main {
                         order.addItem(selectMenu);
                         System.out.println(selectMenu.getName() + "가 장바구니에 추가되었습니다.\n\n");
                     } else if (num3 == 2) {
-                        continue mainMenu;
+                       // continue mainMenu;
                     }
                 } else if (num1 == 3) {
                     System.out.println("[ 커피 메뉴 ]\n");
@@ -87,20 +86,16 @@ public class Main {
                         order.addItem(selectMenu);
                         System.out.println(selectMenu.getName() + "가 장바구니에 추가되었습니다.\n\n");
                     } else if (num3 == 2) {
-                        continue mainMenu;
+                        // continue mainMenu;
                     }
                 } else if (num1 == 4) {
                     // 4. 주문 화면
-                    double totalPrice = 0.0;
-                    for(int i=0 ; i < order.getSize(); i++){
-                        totalPrice += order.getItem(i).getPrice();
-                    }
 
                     System.out.println("[ Orders ]\n");
                     System.out.println("아래와 같이 주문 하시겠습니까?");
                     System.out.println(order);
                     System.out.println("[ Total ]");
-                    System.out.println("W " + totalPrice + "\n");
+                    System.out.println("W " + order.getTotalPrice() + "\n");
                     System.out.println("1. 주문\t2. 메뉴판");
                     num4 = sc.nextInt();
                     if (num4 == 1) {
@@ -116,7 +111,7 @@ public class Main {
                             System.out.println("진행하던 주문이 취소되었습니다.\n\n");
                             order.clearOrder();
                         } else if (num5 == 2) {
-                            continue mainMenu;
+                            // continue mainMenu;
                         }
                     }
                 }
