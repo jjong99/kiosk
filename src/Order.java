@@ -39,10 +39,6 @@ public class Order {
         }
         return totalPrice;
     }
-    // 주문번호 가져오기
-    public int getNumber(){
-        return orderNo;
-    }
 
     // 주문번호 증가
     public void incrementNo(){
@@ -52,7 +48,7 @@ public class Order {
     // toString
     public String orderComplete() {
         this.incrementNo();
-        String str = "\n주문이 완료되었습니다!\n\n대기번호는 [ " + orderNo + " ] 번 입니다.\n";
+        String str = "\n주문이 완료되었습니다!\n\n대기번호는 [ " + orderNo + " ] 번 입니다.\n\n(3초 후 메뉴판으로 돌아갑니다.)\n\n\n";
         return str;
     }
 

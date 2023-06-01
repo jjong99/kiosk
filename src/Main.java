@@ -1,27 +1,32 @@
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.concurrent.TimeUnit;
 
 public class Main {
     public Main() {
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         ArrayList<Item> bahnmis = new ArrayList<>();
         bahnmis.add(new Item("똣똣반미", "베트남 햄 세가지가 들어간 반미", 7.8));
         bahnmis.add(new Item("돼지반미", "불맛가득 돼지고기가 들어간 반미", 7.8));
         bahnmis.add(new Item("새우반미", "매콤한 새우가 들어간 반미", 7.8));
         bahnmis.add(new Item("에그반미", "부드러운 계란 오믈렛이 들어간 반미", 7.8));
         bahnmis.add(new Item("치즈반미", "크림치즈가 들어간 반미", 7.8));
+
         ArrayList<Item> rotis = new ArrayList<>();
         rotis.add(new Item("누텔라바나나로띠", "누텔라와 바나나가 토핑된 로띠", 7.8));
         rotis.add(new Item("계란바나나로띠", "계란과 바나나가 토핑된 로띠 연유와 설탕이 올라갑니다.", 7.8));
         rotis.add(new Item("카야로띠", "카야잼이 듬뿍 들어간 로띠", 7.8));
         rotis.add(new Item("치즈로띠", "체다 & 모짜렐라 치즈가 들어간 로띠", 7.8));
+
         ArrayList<Item> coffee = new ArrayList<>();
         coffee.add(new Item("블랙커피", "베트남식 아메리카노", 3.0));
         coffee.add(new Item("연유커피", "베트남 연유가 들어간 달달한 커피", 4.0));
         coffee.add(new Item("에그커피", "달콤한 계란크림이 들어간 커피", 4.5));
         coffee.add(new Item("아보카도커피", "아보카도를 갈아 베트남 커피를 곁들인 스무디", 5.3));
+
+
         Scanner sc = new Scanner(System.in);
         Order order = new Order();
         Display a = new Display();
@@ -102,10 +107,11 @@ public class Main {
                         // 5. 주문 완료 화면
                         System.out.println(order.orderComplete());
                         order.clearOrder();
+                        TimeUnit.SECONDS.sleep(3);
                     } else if (num4 == 2) {
                         // 6. 주문 취소 화면
                         System.out.println("진행하던 주문을 취소하시겠습니까?");
-                        System.out.println("1. 확인\t2. 취소");
+                        System.out.println("1. 네\t2. 아니오");
                         num5 = sc.nextInt();
                         if (num5 == 1) {
                             System.out.println("진행하던 주문이 취소되었습니다.\n\n");
