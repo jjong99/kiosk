@@ -34,8 +34,8 @@ public class Order {
     // 장바구니 상품 총가격 구하기
     public double getTotalPrice() {
         double totalPrice = 0.0;
-        for(int i=0 ; i < order.size(); i++){
-            totalPrice += order.get(i).price;
+        for (Item item : order) {
+            totalPrice += item.price;
         }
         return totalPrice;
     }
@@ -58,8 +58,8 @@ public class Order {
 
     public String toString() {
         String str = "";
-        for(int i = 0; i < this.order.size(); ++i) {
-            str = str + this.order.get(i).toString() + "\n";
+        for (Item item : this.order) {
+            str = str + item.toString() + "\n";
         }
         return str;
     }

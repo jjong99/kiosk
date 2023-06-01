@@ -55,7 +55,7 @@ public class Main {
                         System.out.println(selectMenu.getName() + "가 장바구니에 추가되었습니다.\n\n");
                     } else if (num3 == 2) {
                         // continue mainMenu;
-                    }
+                    } else { System.out.println("숫자를 입력해주세요."); }
                 } else if (num1 == 2) {
                     System.out.println("[ 로띠 메뉴 ]\n");
                     System.out.println(a.getAllItems(rotis));
@@ -71,7 +71,7 @@ public class Main {
                         System.out.println(selectMenu.getName() + "가 장바구니에 추가되었습니다.\n\n");
                     } else if (num3 == 2) {
                        // continue mainMenu;
-                    }
+                    } else { System.out.println("숫자를 입력해주세요."); }
                 } else if (num1 == 3) {
                     System.out.println("[ 커피 메뉴 ]\n");
                     System.out.println(a.getAllItems(coffee));
@@ -87,7 +87,7 @@ public class Main {
                         System.out.println(selectMenu.getName() + "가 장바구니에 추가되었습니다.\n\n");
                     } else if (num3 == 2) {
                         // continue mainMenu;
-                    }
+                    } else { System.out.println("숫자를 입력해주세요."); }
                 } else if (num1 == 4) {
                     // 4. 주문 화면
 
@@ -112,7 +112,11 @@ public class Main {
                             order.clearOrder();
                         } else if (num5 == 2) {
                             // continue mainMenu;
+                        } else {
+                            System.out.println("숫자를 입력해주세요.");
                         }
+                    } else {
+                        System.out.println("숫자를 입력해주세요.");
                     }
                 }
             }

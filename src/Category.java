@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class Category {
-    ArrayList<Menu> category = new ArrayList();
+    ArrayList<Menu> category = new ArrayList<>();
 
     public Category() {
         this.categoryList();
@@ -16,7 +16,7 @@ public class Category {
     }
 
     public Menu getCategory(int index) {
-        return (Menu)this.category.get(index);
+        return this.category.get(index);
     }
 
     public String mainMenu() {
@@ -26,14 +26,14 @@ public class Category {
         int i;
         Menu a;
         for(i = 0; i < separator; ++i) {
-            a = (Menu)this.category.get(i);
+            a = this.category.get(i);
             str = str + (i + 1) + ". " + a.toString() + "\n";
         }
 
         str = str + "\n[ 주문 메뉴 ] \n";
 
         for(i = separator; i < this.category.size(); ++i) {
-            a = (Menu)this.category.get(i);
+            a = this.category.get(i);
             str = str + (i + 1) + ". " + a.toString() + "\n";
         }
 
