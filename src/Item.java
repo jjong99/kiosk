@@ -1,7 +1,7 @@
 public class Item extends Menu {
     // public String name;
     // public String desc;
-    public double price;
+    private double price;
 
     public Item() {
     }

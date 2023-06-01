@@ -1,7 +1,7 @@
 class Menu {
 
-    public String name;
-    public String desc;
+    protected String name;
+    protected String desc;
 
     public Menu(){}
     public Menu(String name, String desc) {
